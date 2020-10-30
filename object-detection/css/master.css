@@ -1,3 +1,14 @@
+body{
+    margin:0;
+    overflow: hidden;
+}
+
 select{
     width:100px;
+}
+
+#data{
+    color:white;
+    text-shadow: 2px 2px black;
+    font-family: "DejaVu Sans", serif;
 }
