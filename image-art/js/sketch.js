@@ -67,8 +67,10 @@ function draw(){
     if(effect === 0){
         pixelate(video);
         updateText();
+        drawVideo(video);
     } else if(effect === 1) {
         ascii(video);
+        drawVideo(video);
     } else {
         drawObjects();
         drawVideo(video);
