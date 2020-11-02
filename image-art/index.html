@@ -1,52 +1,20 @@
-<!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-		<title>reveal.js</title>
-
-		<link rel="stylesheet" href="resources/css/main.css">
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
-
-		<script src="resources/js/p5.min.js"></script>
-
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-background-image="resources/img/pixel_bg.jpg">
-					<h1>Vous êtes pixelisés!</h1>
-					<div class="canvas" id="pixelate"></div>
-				</section>
-
-				<section>
-					<h1>Vous êtes l'ordinateur!</h1>
-					<div class="canvas" id="ascii"></div>
-				</section>
-			</div>
-		</div>
-
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-
-		<script src="resources/js/pixelate.js"></script>
-		<script src="resources/js/ascii.js"></script>
-		<script>
-			let pixelateSketch = new p5(pixelate, "pixelate");
-
-			Reveal.initialize({
-				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+    <head>
+        <title>Art de l'image | OPT</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/master.css">
+        <script src="js/p5.min.js"></script>
+        <script src="js/ml5.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.backstretch.min.js"></script>
+    </head>
+    <body style="background-image: url('img/bg_pixels.jpg');">
+        <section class="canvas">
+            <div id="title"></div>
+            <div id="sketch"></div>
+            <div id="numbers"></div>
+        </section>
+        
+        <script src="js/sketch.js"></script>
+    </body>
 </html>

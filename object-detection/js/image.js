@@ -15,9 +15,9 @@ let textNbCup;
 let nbCup = 0;
 
 function preload() {
+    bgImg = loadImage("img/background.png");
     detector = ml5.objectDetector('cocossd');
     video = createCapture(VIDEO);
-    bgImg = loadImage("img/background.png");
 }
 
 function gotDetections(error, results) {
@@ -208,6 +208,7 @@ function showNumbers(){
     textNbPhone.html("Nombre de téléphones détectés: " +  nbPhone);
     textNbCup.html("Nombre de tasses détectés: " +  nbCup);
 }
+
 
 function clearScreen(){
     clear();
