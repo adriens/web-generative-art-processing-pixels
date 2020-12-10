@@ -1,6 +1,7 @@
 body{
     margin:0;
     overflow: hidden;
+    background-image: url("../img/background.png");
 }
 
 select{

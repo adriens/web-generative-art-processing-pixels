@@ -1,5 +1,4 @@
 let video;
-let bgImg;
 
 let detector;
 let detections = {};
@@ -15,7 +14,6 @@ let textNbCup;
 let nbCup = 0;
 
 function preload() {
-    bgImg = loadImage("img/background.png");
     detector = ml5.objectDetector('cocossd');
     video = createCapture(VIDEO);
 }
@@ -106,7 +104,6 @@ function gotDetections(error, results) {
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
-    image(bgImg, 0, 0, width, height)
     video.size(width, height);
     video.hide();
 
@@ -127,8 +124,7 @@ function setup() {
 }
 
 function draw() {
-    image(bgImg, 0, 0, width, height)
-    noTint();
+    clear();
     textNbPerson.position(20,height-100);
     textNbPhone.position(20,height-80);
     textNbCup.position(20,height-60);
@@ -141,7 +137,6 @@ function draw() {
 function windowResized(){
     resizeCanvas(windowWidth, windowHeight);
     video.size(width, height);
-    image(bgImg, 0, 0, width, height)
 }
 
 function drawObjects(){
